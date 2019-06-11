@@ -207,6 +207,37 @@
                     </sdk:TabItem>
 <!-- End Test-->
 
+
+                    <!-- Test-->
+                    <sdk:TabItem Header="{Binding}"  Style="{StaticResource LiteTabItemStyle}" DataContext="{StaticResource Locator}">
+                        <sdk:TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="16"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Rectangle Fill="#00FFFFFF" />
+                                    <Path x:Name="outer"  Margin="0,0,4,0"  Stretch="Fill" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}}"  Visibility="Visible" Width="12" Height="12" Grid.Column="0"/>
+                                    <sdk:Label Content="PARAMETERS" Grid.Column="1"/>
+                                </Grid>
+                            </DataTemplate>
+                        </sdk:TabItem.HeaderTemplate>
+                        <Grid Margin="0,0,0,0">
+                            <Grid VerticalAlignment="Top" Margin="0,15,0,0" >
+                                <sdk:TabControl HorizontalAlignment="Left" Height="477" Margin="0,30,0,0" VerticalAlignment="Top" Width="340" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                    <sdk:TabItem Header="All Tasks" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
+                                        <local:LiteParameteView Height="Auto" HorizontalAlignment="Left" Width="347" Margin="-10,-10,-21,0"/>
+                                    </sdk:TabItem>
+
+                                </sdk:TabControl>
+                            </Grid>
+
+                        </Grid>
+                    </sdk:TabItem>
+                    <!-- End Test-->
+
+
                     <!-- Test-->
                     <sdk:TabItem Header="{Binding}"  Style="{StaticResource LiteTabItemStyle}" DataContext="{StaticResource Locator}">
                         <sdk:TabItem.HeaderTemplate>

@@ -138,7 +138,9 @@
     <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
     <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -268,6 +270,9 @@
     <Compile Include="Lite\ServerEvents\ViewModel\ServerNotificationsReceiver.cs" />
     <Compile Include="Lite\WaterQuality\View\LiteCreateTask.xaml.cs">
       <DependentUpon>LiteCreateTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lite\WaterQuality\View\LiteParameteView.xaml.cs">
+      <DependentUpon>LiteParameteView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lite\WaterQuality\View\LiteWaterQualityView.xaml.cs">
       <DependentUpon>LiteWaterQualityView.xaml</DependentUpon>
@@ -596,6 +601,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Lite\WaterQuality\View\LiteCreateTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lite\WaterQuality\View\LiteParameteView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
