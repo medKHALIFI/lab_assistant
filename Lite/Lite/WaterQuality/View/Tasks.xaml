@@ -11,6 +11,8 @@
     mc:Ignorable="d" Height="589.571" Width="293.763"
     d:DesignHeight="300">
     <Grid x:Name="LayoutRoot" Background="{StaticResource SchemeBrush.Background.5}">
+        
+        
         <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="112,10,0,0" VerticalAlignment="Top" Width="144" Content="Task" FontWeight="Bold" FontSize="14"/>
         <ListBox x:Name="listBox_task" HorizontalAlignment="Left" Height="140" Margin="10,92,0,0" VerticalAlignment="Top" Width="186">
             <ListBoxItem Content="Task 1"></ListBoxItem>

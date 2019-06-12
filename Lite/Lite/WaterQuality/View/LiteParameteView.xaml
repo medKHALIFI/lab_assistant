@@ -12,5 +12,53 @@
     mc:Ignorable="d" Height="589.571" Width="293.763"
     d:DesignHeight="300">
 
-    <Grid x:Name="LayoutRoot" Background="{StaticResource SchemeBrush.Background.5}"/>
+    <Grid x:Name="LayoutRoot" Background="White">
+
+
+        <sdk:TabControl x:Name = "tabControl" >
+
+            <sdk:TabItem Header = "Physical">
+
+                <Grid Background = "#FFE5E5E5">
+
+                    <StackPanel>
+
+
+
+                    </StackPanel>
+
+                </Grid>
+
+            </sdk:TabItem>
+
+            <sdk:TabItem Header = "Biological">
+
+                <Grid Background = "#FFE5E5E5">
+
+                    <StackPanel>
+
+
+
+                    </StackPanel>
+
+                </Grid>
+
+            </sdk:TabItem>
+
+            <sdk:TabItem Header = "Chimical">
+
+                <Grid Background = "#FFE5E5E5">
+
+                    <StackPanel>
+
+
+
+                    </StackPanel>
+
+                </Grid>
+
+            </sdk:TabItem>
+
+        </sdk:TabControl>
+    </Grid>
 </UserControl>
