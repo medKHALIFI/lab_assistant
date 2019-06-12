@@ -29,6 +29,7 @@ namespace Lite
             textBox_mission.Visibility = Visibility.Collapsed;
             comboBox_method.Visibility = Visibility.Collapsed;
             comboBox_inspector.Visibility = Visibility.Collapsed;
+            
 
             button_save.Visibility = Visibility.Collapsed;
 
@@ -50,17 +51,20 @@ namespace Lite
             comboBox_inspector.Visibility = Visibility.Collapsed;
             button_save.Visibility = Visibility.Collapsed;
 
+
             // todo add here laboratory from database
 
             label_mission_view.Visibility = Visibility.Visible;
             label_method_view.Visibility = Visibility.Visible;
             label_labassistant_view.Visibility = Visibility.Visible;
+            label_id_view.Visibility = Visibility.Visible;
 
             label_mission_view.Content = "mission " + listBox_task.SelectedIndex ;
             label_method_view.Content = "instantly " ;
             label_labassistant_view.Content = "labassistant " + listBox_task.SelectedIndex;
-        
-    }
+            label_id_view.Content = listBox_task.SelectedIndex;
+
+        }
 
         private void button_edit_Click(object sender, RoutedEventArgs e)
         {
@@ -74,6 +78,7 @@ namespace Lite
             label_mission_view.Visibility = Visibility.Collapsed;
             label_method_view.Visibility = Visibility.Collapsed;
             label_labassistant_view.Visibility = Visibility.Collapsed;
+             // label_id_view.Visibility = Visibility.Collapsed;
 
 
             textBox_mission.Text = "mission " + listBox_task.SelectedIndex;
@@ -126,10 +131,12 @@ namespace Lite
                 label_mission_view.Visibility = Visibility.Visible;
                 label_method_view.Visibility = Visibility.Visible;
                 label_labassistant_view.Visibility = Visibility.Visible;
+                label_id_view.Visibility = Visibility.Visible;
 
                 label_mission_view.Content = "mission " + listBox_task.SelectedIndex;
                 label_method_view.Content = "instantly ";
                 label_labassistant_view.Content = "labassistant " + listBox_task.SelectedIndex;
+                label_id_view.Content = listBox_task.SelectedIndex;
 
             }
             

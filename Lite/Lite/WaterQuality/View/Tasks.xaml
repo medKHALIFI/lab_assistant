@@ -52,7 +52,9 @@
             <ComboBoxItem Content="inspector 6"/>
 
         </ComboBox>
-        <Button x:Name="button_save" Content="Save" HorizontalAlignment="Left" Height="26" Margin="136,409,0,0" VerticalAlignment="Top" Width="120" Click="button_save_Click" />
+        <Button x:Name="button_save" Content="Save" HorizontalAlignment="Left" Height="26" Margin="135,448,0,0" VerticalAlignment="Top" Width="120" Click="button_save_Click" />
+        <sdk:Label x:Name="label_id" Margin="16,397,0,0" Content="Id task" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_id_view" Margin="131,397,0,0" Content="..." Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
 
 
     </Grid>
