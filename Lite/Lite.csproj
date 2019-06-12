@@ -268,8 +268,17 @@
     <Compile Include="Lite\TraceLogger\ViewModel\LiteTraceLogger.cs" />
     <Compile Include="Lite\ServerEvents\ViewModel\ServerEventsViewModel.cs" />
     <Compile Include="Lite\ServerEvents\ViewModel\ServerNotificationsReceiver.cs" />
+    <Compile Include="Lite\WaterQuality\View\LiteParameterBiological.xaml.cs">
+      <DependentUpon>LiteParameterBiological.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lite\WaterQuality\View\LiteParameter_chimical.xaml.cs">
+      <DependentUpon>LiteParameter_chimical.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Lite\WaterQuality\View\LiteCreateTask.xaml.cs">
       <DependentUpon>LiteCreateTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lite\WaterQuality\View\LiteParameterPhysical.xaml.cs">
+      <DependentUpon>LiteParameterPhysical.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lite\WaterQuality\View\LiteParameteView.xaml.cs">
       <DependentUpon>LiteParameteView.xaml</DependentUpon>
@@ -600,7 +609,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Lite\WaterQuality\View\LiteParameterBiological.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lite\WaterQuality\View\LiteParameter_chimical.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lite\WaterQuality\View\LiteCreateTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lite\WaterQuality\View\LiteParameterPhysical.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
