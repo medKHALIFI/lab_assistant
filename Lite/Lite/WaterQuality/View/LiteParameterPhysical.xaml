@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Lite.LiteParameterPhysical"
+﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,13 +7,41 @@
     xmlns:local="clr-namespace:Lite"
     xmlns:sfc="http://schemas.spatialeye.com/clienttoolkit" 
              
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" x:Class="Lite.LiteParameterPhysical" 
+             
     mc:Ignorable="d" Height="589.571" Width="293.763"
     d:DesignHeight="300">
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource SchemeBrush.Background.5}" >
 
         <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="101,10,0,0" VerticalAlignment="Top" Width="144" Content="Physical" FontWeight="Bold" FontSize="14"/>
-  
+        <Button x:Name="button_add" Content="Add" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Width="50"/>
+        <sdk:Label x:Name="lblLatitud" Content="Lat." Margin="4,63,300,48" Width="30" Height="23" Visibility="Visible" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLatitudP" Margin="35,63,0,0" TextWrapping="Wrap" Visibility="Visible"
+                 Text="{Binding MapMarkISViewModel.Latitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Latitud" AcceptsReturn="True" IsEnabled="False"/>
+
+        <sdk:Label x:Name="lblLongitud" Content="Long." Margin="4,93,304,17" Width="30" Height="23" Visibility="Visible" VerticalAlignment="Top" />
+        <TextBox x:Name="txtLongitudP" Margin="35,93,0,0" TextWrapping="Wrap" Visibility="Visible"
+               Text="{Binding MapMarkISViewModel.Longitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Longitud" IsEnabled="False"/>
+        <TextBox x:Name="txtLatitudT" Margin="35,63,0,0" TextWrapping="Wrap"  Visibility="Collapsed"
+                 Text="{Binding MapMeasureISViewModel.Latitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Latitud" AcceptsReturn="True" IsEnabled="False"/>
+
+        <TextBox x:Name="txtLongitudT" Margin="35,93,0,0" TextWrapping="Wrap" Visibility="Collapsed"
+               Text="{Binding MapMeasureISViewModel.Longitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Longitud" IsEnabled="False"/>
+
+        <TextBox x:Name="txtLatitudTC" Margin="35,63,0,0" TextWrapping="Wrap"  Visibility="Collapsed"
+                 Text="{Binding MapPointISViewModel.Latitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Latitud" AcceptsReturn="True" IsEnabled="False"/>
+
+        <TextBox x:Name="txtLongitudTC" Margin="35,93,0,0" TextWrapping="Wrap" Visibility="Collapsed"
+               Text="{Binding MapPointISViewModel.Longitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Longitud" IsEnabled="False"/>
+
+
+
+
+
+
+
+
 
     </Grid>
 </UserControl>

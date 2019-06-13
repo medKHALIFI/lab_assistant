@@ -34,14 +34,39 @@ namespace Lite
             button_save.Visibility = Visibility.Collapsed;
 
             // progress bar  
-          //  Indicador.Visibility = Visibility.Collapsed;
+            Indicador.Visibility = Visibility.Collapsed;
+
+
+           
+      
 
         }
+
+        // test 
+        private void somthing()
+        {
+           Indicador.Visibility = Visibility.Visible;
+           System.Threading.Thread.Sleep(5000);
+
+        }
+
 
         // test listener 
         private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+           // somthing();
+           
             // MessageBox.Show(" test");
+            // MessageBox.Show(DateTime.Now.ToString("first"+"MM/dd/yyyy HH:mm:ss"));
+            // progress bar  
+
+
+            
+            // MessageBox.Show(DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+
+         
+
+
 
             //Do something with the selected item
 
@@ -62,7 +87,18 @@ namespace Lite
             label_mission_view.Content = "mission " + listBox_task.SelectedIndex ;
             label_method_view.Content = "instantly " ;
             label_labassistant_view.Content = "labassistant " + listBox_task.SelectedIndex;
-            label_id_view.Content = listBox_task.SelectedIndex;
+
+            // Instantiate random number generator using system-supplied value as seed.
+            Random rand = new Random();
+            // Generate and display 5 random byte (integer) values.
+            byte[] bytes = new byte[5];
+            rand.NextBytes(bytes);
+
+            label_id_view.Content = rand.Next();
+
+           // System.Threading.Thread.Sleep(5000);
+            // progress bar  
+           //Indicador.Visibility = Visibility.Collapsed;
 
         }
 

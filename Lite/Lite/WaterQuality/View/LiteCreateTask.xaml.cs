@@ -67,6 +67,18 @@ namespace Lite
                     label_param_type_view.Content = "physical";
                 }
 
+                // Instantiate random number generator using system-supplied value as seed.
+                Random rand = new Random();
+                // Generate and display 5 random byte (integer) values.
+                byte[] bytes = new byte[5];
+                rand.NextBytes(bytes);
+
+
+
+                label_id_task_view.Visibility = Visibility.Visible;
+                // todo add here laboratory from database
+                label_id_task_view.Content =rand.Next()  ;
+
 
             }
         }

@@ -14,7 +14,17 @@
     <Grid x:Name="LayoutRoot" Background="{StaticResource SchemeBrush.Background.5}" >
 
         <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="101,10,0,0" VerticalAlignment="Top" Width="144" Content="Create task" FontWeight="Bold" FontSize="14"/>
-        <ComboBox x:Name="comboBox_mission" Height="22" Margin="101,49,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129">
+
+        <sdk:Label x:Name="lblLatitud" Content="Lat." Margin="10,63,236,0" Height="23" Visibility="Visible" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLatitudP" Margin="76,63,0,0" TextWrapping="Wrap" Visibility="Visible"
+                 Text="{Binding MapMarkISViewModel.Latitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="208" ToolTipService.ToolTip="Latitud" AcceptsReturn="True" IsEnabled="False"/>
+
+        <sdk:Label x:Name="lblLongitud" Content="Long." Margin="10,93,230,0" Height="23" Visibility="Visible" VerticalAlignment="Top" />
+        <TextBox x:Name="txtLongitudP" Margin="76,93,0,0" TextWrapping="Wrap" Visibility="Visible"
+               Text="{Binding MapMarkISViewModel.Longitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="208" ToolTipService.ToolTip="Longitud" IsEnabled="False"/>
+
+        
+        <ComboBox x:Name="comboBox_mission" Height="22" Margin="114,135,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129">
             <ComboBoxItem Content="Mission 1"></ComboBoxItem>
             <ComboBoxItem Content="Mission 2"></ComboBoxItem>
             <ComboBoxItem Content="Mission 3"></ComboBoxItem>
@@ -22,31 +32,33 @@
         </ComboBox>
 
 
-        <sdk:Label x:Name="label1" HorizontalAlignment="Left" Height="28" Margin="17,52,0,0" VerticalAlignment="Top" Width="62" Content="Mission" FontWeight="Bold"/>
-        <ComboBox x:Name="comboBox_method" Margin="101,81,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129">
+        <sdk:Label x:Name="label1" HorizontalAlignment="Left" Height="28" Margin="30,138,0,0" VerticalAlignment="Top" Width="62" Content="Mission" FontWeight="Bold"/>
+        <ComboBox x:Name="comboBox_method" Margin="114,167,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129">
             <ComboBoxItem Content="instantly"/>
             <ComboBoxItem Content="manuly"/>
         </ComboBox>
-        <sdk:Label x:Name="label1_Copy" HorizontalAlignment="Left" Margin="17,84,0,0" Width="62" Content="Method" Height="16" VerticalAlignment="Top" FontWeight="Bold"/>
-        <sdk:Label x:Name="label1_Copy1" HorizontalAlignment="Left" Height="16" Margin="17,117,0,0" VerticalAlignment="Top" Width="62" Content="Inspector" FontWeight="Bold"/>
-        <ComboBox x:Name="comboBox_inspector" Height="22" Margin="101,114,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129">
+        <sdk:Label x:Name="label1_Copy" HorizontalAlignment="Left" Margin="30,170,0,0" Width="62" Content="Method" Height="16" VerticalAlignment="Top" FontWeight="Bold"/>
+        <sdk:Label x:Name="label1_Copy1" HorizontalAlignment="Left" Height="16" Margin="30,203,0,0" VerticalAlignment="Top" Width="62" Content="Inspector" FontWeight="Bold"/>
+        <ComboBox x:Name="comboBox_inspector" Height="22" Margin="114,200,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129">
             <ComboBoxItem Content="inspector 1"/>
             <ComboBoxItem Content="inspector 2"/>
             <ComboBoxItem Content="inspector 3"/>
             <ComboBoxItem Content="inspector 4"/>
 
         </ComboBox>
-        <sdk:Label x:Name="label2" HorizontalAlignment="Left" Height="22" Margin="17,145,0,0" VerticalAlignment="Top" Width="52" Content="Note" FontWeight="Bold"/>
-        <TextBox x:Name="textBox_note" Height="53" Margin="101,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129"/>
-        <sdk:Label x:Name="label2_Copy" Height="22" Margin="101,224,0,0" VerticalAlignment="Top" Content="proprites" FontStyle="Italic" HorizontalAlignment="Left" Width="92" FontSize="14" FontWeight="Bold"/>
-        <sdk:Label x:Name="label_laboratory" Height="22" Margin="17,267,0,0" VerticalAlignment="Top" Content="Laboratory" HorizontalAlignment="Left" Width="73" FontWeight="Bold"/>
-        <sdk:Label x:Name="label_laboratory_view" Height="22" Margin="137,267,0,0" VerticalAlignment="Top" Content="..." HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
-        <sdk:Label x:Name="label_labassistant" Margin="17,289,0,0" Content="labAssistant" HorizontalAlignment="Left" Width="85" Height="22" VerticalAlignment="Top" FontWeight="Bold"/>
-        <sdk:Label x:Name="label_labassistant_view" Margin="137,289,0,0" Content="..." HorizontalAlignment="Left" Width="104" Height="22" VerticalAlignment="Top" FontWeight="Bold"/>
-        <sdk:Label x:Name="label_param_type" Margin="17,316,0,0" Content="parameter type" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold"/>
-        <sdk:Label x:Name="label_param_type_view" Margin="137,316,0,0" Content="..." Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
+        <sdk:Label x:Name="label2" HorizontalAlignment="Left" Height="22" Margin="30,231,0,0" VerticalAlignment="Top" Width="52" Content="Note" FontWeight="Bold"/>
+        <TextBox x:Name="textBox_note" Height="53" Margin="114,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="129"/>
+        <sdk:Label x:Name="label2_Copy" Height="22" Margin="114,331,0,0" VerticalAlignment="Top" Content="proprites" FontStyle="Italic" HorizontalAlignment="Left" Width="92" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.489,1.409"/>
+        <sdk:Label x:Name="label_laboratory" Height="22" Margin="34,380,0,0" VerticalAlignment="Top" Content="Laboratory" HorizontalAlignment="Left" Width="73" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_laboratory_view" Height="22" Margin="154,380,0,0" VerticalAlignment="Top" Content="..." HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_labassistant" Margin="34,402,0,0" Content="labAssistant" HorizontalAlignment="Left" Width="85" Height="22" VerticalAlignment="Top" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_labassistant_view" Margin="154,402,0,0" Content="..." HorizontalAlignment="Left" Width="104" Height="22" VerticalAlignment="Top" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_param_type" Margin="34,429,0,0" Content="parameter type" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_param_type_view" Margin="154,429,0,0" Content="..." Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
         <Grid HorizontalAlignment="Left" Height="1" Margin="0,210,0,0" VerticalAlignment="Top" Width="0"/>
-        <Button x:Name="button" Content="Create" HorizontalAlignment="Left" Margin="157,383,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="button" Content="Create" HorizontalAlignment="Left" Margin="170,469,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <sdk:Label x:Name="label_id_task" Height="22" Margin="30,296,0,0" VerticalAlignment="Top" Content="id task" HorizontalAlignment="Left" Width="73" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_id_task_view" Height="22" Margin="114,296,0,0" VerticalAlignment="Top" Content="..." HorizontalAlignment="Left" Width="131" FontWeight="Bold"/>
 
 
     </Grid>

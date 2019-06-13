@@ -100,8 +100,8 @@
 
       <sfc:ResizableContentControl x:Name="RightContentControl" DragBarAlignment="Left" Grid.Column="1" Grid.Row="1"  AllowExpandCollapse="True">
         <sdk:TabControl x:Name="ToolboxTabControl" Style="{StaticResource LiteTabControlStyle}"
-        Margin="0,0,8,0" SelectedIndex="0" MinWidth="240" MaxWidth="500" Grid.Row="1" Grid.Column="1" Width="360" Padding="0" Background="{StaticResource Lite.Brush.Background.Light}" BorderThickness="0">
-
+        Margin="0,0,8,0" SelectedIndex="0" MinWidth="240" MaxWidth="500" Grid.Row="1" Grid.Column="1" Width="500" Padding="0" Background="{StaticResource Lite.Brush.Background.Light}" BorderThickness="0">
+<!-- i have change the width -->
           <sdk:TabItem Header="{Binding}" Style="{StaticResource LiteTabItemStyle}">
             <sdk:TabItem.HeaderTemplate>
               <DataTemplate>
@@ -218,29 +218,32 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Rectangle Fill="#00FFFFFF" />
-                                    <Path x:Name="outer"  Margin="0,0,4,0"  Stretch="Fill" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}}"  Visibility="Visible" Width="12" Height="12" Grid.Column="0"/>
+                                    <Path x:Name="outer"  Margin="0,0,4,0"  Stretch="Fill" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ContentControl}}"  Visibility="Visible" Width="12" Height="16" Grid.Column="0"/>
                                     <sdk:Label Content="tasks" Grid.Column="1"/>
                                 </Grid>
                             </DataTemplate>
                         </sdk:TabItem.HeaderTemplate>
-                        <Grid Margin="0,0,0,0">
-                            <Grid VerticalAlignment="Top" Margin="0,15,0,0" >
-                                <sdk:TabControl HorizontalAlignment="Left" Height="477" Margin="0,30,0,0" VerticalAlignment="Top" Width="340" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                                    <sdk:TabItem Header="View tasks" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
-                                        <local:Tasks Height="Auto" HorizontalAlignment="Left" Width="347" Margin="-10,-10,-21,0"/>
+
+                        <Grid Margin="0,0,0,0"  Background="{StaticResource SchemeBrush.Background.5}">
+                            
+                                <CheckBox x:Name="chkMarca1" Visibility="Visible" Height="24" HorizontalAlignment="Center"  Width="24"  Margin="0,0,0,0" 
+                                    VerticalAlignment="Top"
+                                    Style="{StaticResource MetroCheckBoxStyleLight}" Content="{StaticResource MetroIcon.Content.TrailPoint}"
+                                    ToolTipService.ToolTip="Genera Ubicación" Foreground="{StaticResource Lite.Brush.Text.Light}"
+                                    IsChecked="{Binding MapMarkISViewModel.MarcaActiva, Mode=TwoWay,Source={StaticResource Locator}}" Grid.Row="0"/>
+                                <Grid VerticalAlignment="Top" Margin="0,15,0,0" >
+                                <sdk:TabControl HorizontalAlignment="Left"  Margin="0,30,0,0" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                    <sdk:TabItem Header="View tasks" Background="#FFD2D4D4" Foreground="#FF1B1B1B"  >
+                                        <local:Tasks  HorizontalAlignment="Left"  />
                                     </sdk:TabItem>
                                     <sdk:TabItem Header="create tasks" Background="#FFD2D4D4" Foreground="#FF1B1B1B">
-                                        <local:LiteCreateTask  Margin="-10,-10,-20,-10" VerticalAlignment="Top" Height="449"/>
+                                        <local:LiteCreateTask  VerticalAlignment="Top" />
                                     </sdk:TabItem>
 
                                 </sdk:TabControl>
                             </Grid>
                             <Grid HorizontalAlignment="Right"  Height="40" VerticalAlignment="Top" Background="{StaticResource SchemeBrush.Background.2}" Margin="0,0,19,0">
-                                <CheckBox x:Name="chkMarca" Height="29" VerticalAlignment="Center"
-                                		Style="{StaticResource MetroCheckBoxStyleLight}" Content="{StaticResource MetroIcon.Content.Locate}"
-                                		ToolTipService.ToolTip="Genera Ubicación" Foreground="Red"
-                                		IsChecked="{Binding MapMarkViewModel.MarcaActiva, Mode=TwoWay,Source={StaticResource Locator}}" 
-                                        Margin="0,5,3,6" HorizontalAlignment="Right" Width="33"/>
+                               
                             </Grid>
                         </Grid>
                     </sdk:TabItem>
@@ -262,16 +265,22 @@
                                 </Grid>
                             </DataTemplate>
                         </sdk:TabItem.HeaderTemplate>
-                        <Grid Margin="0,0,0,0">
+                        <Grid Margin="0,0,0,0"  Background="{StaticResource SchemeBrush.Background.5}">
+                            <CheckBox x:Name="chkMarca2" Visibility="Visible" Height="24" HorizontalAlignment="Center"  Width="24"  Margin="0,0,0,0" 
+                                    VerticalAlignment="Top"
+                                    Style="{StaticResource MetroCheckBoxStyleLight}" Content="{StaticResource MetroIcon.Content.TrailPoint}"
+                                    ToolTipService.ToolTip="Genera Ubicación" Foreground="{StaticResource Lite.Brush.Text.Light}"
+                                    IsChecked="{Binding MapMarkISViewModel.MarcaActiva, Mode=TwoWay,Source={StaticResource Locator}}" Grid.Row="0"/>
+                            
                             <Grid VerticalAlignment="Top" Margin="0,15,0,0" >
                                 <sdk:TabControl HorizontalAlignment="Left" Height="477" Margin="0,30,0,0" VerticalAlignment="Top" Width="340" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                                    <sdk:TabItem Header="Chimical Parameters" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
+                                    <sdk:TabItem Header="Chimical" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
                                         <local:LiteParameter_chimical Height="Auto" HorizontalAlignment="Left" Width="347" Margin="-10,-10,-21,0"/>
                                     </sdk:TabItem>
-                                    <sdk:TabItem Header="Physical Parameters" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
+                                    <sdk:TabItem Header="Physical" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
                                         <local:LiteParameterPhysical Height="Auto" HorizontalAlignment="Left" Width="347" Margin="-10,-10,-21,0"/>
                                     </sdk:TabItem>
-                                    <sdk:TabItem Header="biological Parameters" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
+                                    <sdk:TabItem Header="Biological" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
                                         <local:LiteParameterBiological Height="Auto" HorizontalAlignment="Left" Width="347" Margin="-10,-10,-21,0"/>
                                     </sdk:TabItem>
 
