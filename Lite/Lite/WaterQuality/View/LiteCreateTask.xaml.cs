@@ -30,6 +30,10 @@ namespace Lite
             // add listener to the combobox
             comboBox_mission.SelectionChanged += OnSelectionChanged;
 
+
+            // button degetalisation
+            
+
         }
 
         // test listener 

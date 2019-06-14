@@ -229,7 +229,7 @@
                                 <CheckBox x:Name="chkMarca1" Visibility="Visible" Height="24" HorizontalAlignment="Center"  Width="24"  Margin="0,0,0,0" 
                                     VerticalAlignment="Top"
                                     Style="{StaticResource MetroCheckBoxStyleLight}" Content="{StaticResource MetroIcon.Content.TrailPoint}"
-                                    ToolTipService.ToolTip="Genera Ubicación" Foreground="{StaticResource Lite.Brush.Text.Light}"
+                                    ToolTipService.ToolTip="Controle point" Foreground="{StaticResource Lite.Brush.Text.Light}"
                                     IsChecked="{Binding MapMarkISViewModel.MarcaActiva, Mode=TwoWay,Source={StaticResource Locator}}" Grid.Row="0"/>
                                 <Grid VerticalAlignment="Top" Margin="0,15,0,0" >
                                 <sdk:TabControl HorizontalAlignment="Left"  Margin="0,30,0,0" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
@@ -266,14 +266,15 @@
                             </DataTemplate>
                         </sdk:TabItem.HeaderTemplate>
                         <Grid Margin="0,0,0,0"  Background="{StaticResource SchemeBrush.Background.5}">
-                            <CheckBox x:Name="chkMarca2" Visibility="Visible" Height="24" HorizontalAlignment="Center"  Width="24"  Margin="0,0,0,0" 
+                       <!--    <CheckBox x:Name="chkMarca2" Visibility="Visible" Height="24" HorizontalAlignment="Center"  Width="24"  Margin="0,0,0,0" 
                                     VerticalAlignment="Top"
                                     Style="{StaticResource MetroCheckBoxStyleLight}" Content="{StaticResource MetroIcon.Content.TrailPoint}"
                                     ToolTipService.ToolTip="Genera Ubicación" Foreground="{StaticResource Lite.Brush.Text.Light}"
                                     IsChecked="{Binding MapMarkISViewModel.MarcaActiva, Mode=TwoWay,Source={StaticResource Locator}}" Grid.Row="0"/>
-                            
+                            -->
+
                             <Grid VerticalAlignment="Top" Margin="0,15,0,0" >
-                                <sdk:TabControl HorizontalAlignment="Left" Height="477" Margin="0,30,0,0" VerticalAlignment="Top" Width="340" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                <sdk:TabControl HorizontalAlignment="Left"  Margin="0,30,0,0" VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
                                     <sdk:TabItem Header="Chimical" Background="#FFD2D4D4" Foreground="#FF1B1B1B" >
                                         <local:LiteParameter_chimical Height="Auto" HorizontalAlignment="Left" Width="347" Margin="-10,-10,-21,0"/>
                                     </sdk:TabItem>
