@@ -15,27 +15,32 @@
     <Grid x:Name="LayoutRoot" Background="{StaticResource SchemeBrush.Background.5}" >
 
         <sdk:Label x:Name="label" HorizontalAlignment="Left" Height="28" Margin="101,10,0,0" VerticalAlignment="Top" Width="144" Content="Physical" FontWeight="Bold" FontSize="14"/>
-        <Button x:Name="button_add" Content="Add" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Width="50"/>
-        <sdk:Label x:Name="lblLatitud" Content="Lat." Margin="4,63,300,48" Width="30" Height="23" Visibility="Visible" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtLatitudP" Margin="35,63,0,0" TextWrapping="Wrap" Visibility="Visible"
-                 Text="{Binding MapMarkISViewModel.Latitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Latitud" AcceptsReturn="True" IsEnabled="False"/>
-
-        <sdk:Label x:Name="lblLongitud" Content="Long." Margin="4,93,304,17" Width="30" Height="23" Visibility="Visible" VerticalAlignment="Top" />
-        <TextBox x:Name="txtLongitudP" Margin="35,93,0,0" TextWrapping="Wrap" Visibility="Visible"
-               Text="{Binding MapMarkISViewModel.Longitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Longitud" IsEnabled="False"/>
-        <TextBox x:Name="txtLatitudT" Margin="35,63,0,0" TextWrapping="Wrap"  Visibility="Collapsed"
-                 Text="{Binding MapMeasureISViewModel.Latitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Latitud" AcceptsReturn="True" IsEnabled="False"/>
-
-        <TextBox x:Name="txtLongitudT" Margin="35,93,0,0" TextWrapping="Wrap" Visibility="Collapsed"
-               Text="{Binding MapMeasureISViewModel.Longitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Longitud" IsEnabled="False"/>
-
-        <TextBox x:Name="txtLatitudTC" Margin="35,63,0,0" TextWrapping="Wrap"  Visibility="Collapsed"
-                 Text="{Binding MapPointISViewModel.Latitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Latitud" AcceptsReturn="True" IsEnabled="False"/>
-
-        <TextBox x:Name="txtLongitudTC" Margin="35,93,0,0" TextWrapping="Wrap" Visibility="Collapsed"
-               Text="{Binding MapPointISViewModel.Longitud , Mode=TwoWay, BindsDirectlyToSource=True}" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="236" ToolTipService.ToolTip="Longitud" IsEnabled="False"/>
-
-
+        <Button x:Name="button_add" Content="Add" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Width="50" Click="button_add_Click"/>
+        <sdk:Label x:Name="label_parametres" HorizontalAlignment="Left" Height="23" Margin="21,69,0,0" VerticalAlignment="Top" Width="78" Content="Parameters" FontWeight="Bold"/>
+        <ComboBox x:Name="comboBox_parameter" HorizontalAlignment="Left" Margin="114,66,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Select item..."/>
+            <ComboBoxItem Content="Temperature"/>
+            <ComboBoxItem Content="turbidity"/>
+            <ComboBoxItem Content="Color"/>
+            <ComboBoxItem Content="Conductivity"/>
+        </ComboBox>
+        <sdk:Label x:Name="label_proprites" HorizontalAlignment="Left" Height="28" Margin="90,112,0,0" VerticalAlignment="Top" Width="120" Content="proprites" FontWeight="Bold" FontSize="14" FontStyle="Italic"/>
+        <sdk:Label x:Name="label_name_param" HorizontalAlignment="Left" Height="28" Margin="21,165,0,0" VerticalAlignment="Top" Width="68" Content="Name" FontWeight="Bold" FontSize="12"/>
+        <sdk:Label x:Name="label_name_param_view" HorizontalAlignment="Left" Height="28" Margin="114,166,0,0" VerticalAlignment="Top" Width="120" Content="..."/>
+        <sdk:Label x:Name="label_Unit_param" HorizontalAlignment="Left" Height="28" Margin="21,193,0,0" VerticalAlignment="Top" Width="68" Content="Unit" FontWeight="Bold" FontSize="12"/>
+        <sdk:Label x:Name="label_unit_param_view" HorizontalAlignment="Left" Height="28" Margin="114,193,0,0" VerticalAlignment="Top" Width="120" Content="..."/>
+        <sdk:Label x:Name="label_goodvalue_param" HorizontalAlignment="Left" Height="28" Margin="21,221,0,0" VerticalAlignment="Top" Width="78" Content="Good value" FontWeight="Bold" FontSize="12"/>
+        <sdk:Label x:Name="label_goodvalue_param_view" HorizontalAlignment="Left" Height="28" Margin="114,221,0,0" VerticalAlignment="Top" Width="120" Content="..."/>
+        <sdk:Label x:Name="label_badvalue_param" HorizontalAlignment="Left" Height="28" Margin="21,249,0,0" VerticalAlignment="Top" Width="68" Content="Bad value" FontWeight="Bold" FontSize="12"/>
+        <sdk:Label x:Name="label_badvalue_param_view" HorizontalAlignment="Left" Height="28" Margin="114,249,0,0" VerticalAlignment="Top" Width="120" Content="..."/>
+        <Button x:Name="button_edit" Content="Edit" HorizontalAlignment="Left" Height="27" Margin="47,320,0,0" VerticalAlignment="Top" Width="81" FontWeight="Bold" Click="button_edit_Click"/>
+        <Button x:Name="button_delete" Content="Delete" HorizontalAlignment="Left" Height="27" Margin="153,320,0,0" VerticalAlignment="Top" Width="81" FontWeight="Bold" Click="button_delete_Click"/>
+        <TextBox x:Name="textBox_name" HorizontalAlignment="Left" Height="23" Margin="114,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_unit" HorizontalAlignment="Left" Height="23" Margin="114,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_goodvalue" HorizontalAlignment="Left" Height="23" Margin="114,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_badvalue" HorizontalAlignment="Left" Height="23" Margin="114,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button_save" Content="Save" HorizontalAlignment="Left" Margin="114,282,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="button_save_Click"/>
+        <Button x:Name="button_save_param" Content="save" HorizontalAlignment="Left" Height="22" Margin="194,282,0,0" VerticalAlignment="Top" Width="63" FontWeight="Bold" Click="button_save_param_Click"/>
 
 
 
