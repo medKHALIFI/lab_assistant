@@ -36,9 +36,10 @@ namespace Lite
             // progress bar  
             Indicador.Visibility = Visibility.Collapsed;
 
-
            
-      
+
+
+
 
         }
 
@@ -54,17 +55,20 @@ namespace Lite
         // test listener 
         private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           // somthing();
-           
+            // somthing();
+          
+
+
+
             // MessageBox.Show(" test");
             // MessageBox.Show(DateTime.Now.ToString("first"+"MM/dd/yyyy HH:mm:ss"));
             // progress bar  
 
 
-            
+
             // MessageBox.Show(DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
 
-         
+
 
 
 
@@ -96,9 +100,16 @@ namespace Lite
 
             label_id_view.Content = rand.Next();
 
-           // System.Threading.Thread.Sleep(5000);
+            //test 
+            Random gen = new Random();
+            int range = 5 * 365; //5 years          
+            DateTime randomDate = DateTime.Today.AddDays(-gen.Next(range));
+            //MessageBox.Show(randomDate.ToString());
+            label_deadline_view.Content = randomDate;
+
+            // System.Threading.Thread.Sleep(5000);
             // progress bar  
-           //Indicador.Visibility = Visibility.Collapsed;
+            //Indicador.Visibility = Visibility.Collapsed;
 
         }
 
@@ -173,6 +184,8 @@ namespace Lite
                 label_method_view.Content = "instantly ";
                 label_labassistant_view.Content = "labassistant " + listBox_task.SelectedIndex;
                 label_id_view.Content = listBox_task.SelectedIndex;
+
+                
 
             }
             

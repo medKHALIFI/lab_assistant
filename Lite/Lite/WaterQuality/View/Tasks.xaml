@@ -8,7 +8,7 @@
     xmlns:local="clr-namespace:Lite"
     xmlns:sfc="http://schemas.spatialeye.com/clienttoolkit" 
              
-    mc:Ignorable="d" Height="589.571" Width="293.763"
+    mc:Ignorable="d" Height="589.571" Width="320.763"
     d:DesignHeight="300">
     <Grid x:Name="LayoutRoot" Background="{StaticResource SchemeBrush.Background.5}">
 
@@ -41,12 +41,12 @@
         <sdk:Label x:Name="label_method_view" Margin="136,333,0,0" Content="..." HorizontalAlignment="Left" Width="104" Height="22" VerticalAlignment="Top" FontWeight="Bold"/>
         <sdk:Label x:Name="label_labassistant" Margin="16,360,0,0" Content="Labassistant" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold"/>
         <sdk:Label x:Name="label_labassistant_view" Margin="136,360,0,0" Content="..." Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
-        <TextBox x:Name="textBox_mission" HorizontalAlignment="Left" Height="23" Margin="136,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="comboBox_method" Margin="136,338,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120">
+        <TextBox x:Name="textBox_mission" HorizontalAlignment="Left" Height="23" Margin="131,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboBox_method" Margin="131,338,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" RenderTransformOrigin="0.45,0.545">
             <ComboBoxItem Content="instantly"/>
             <ComboBoxItem Content="manuly"/>
         </ComboBox>
-        <ComboBox x:Name="comboBox_inspector" Height="22" Margin="135,367,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121">
+        <ComboBox x:Name="comboBox_inspector" Height="22" Margin="131,365,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121">
             <ComboBoxItem Content="inspector 1"/>
             <ComboBoxItem Content="inspector 2"/>
             <ComboBoxItem Content="inspector 3"/>
@@ -57,7 +57,9 @@
         </ComboBox>
         <Button x:Name="button_save" Content="Save" HorizontalAlignment="Left" Height="26" Margin="136,452,0,0" VerticalAlignment="Top" Width="120" Click="button_save_Click" />
         <sdk:Label x:Name="label_id" Margin="21,286,0,0" Content="Id task" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold"/>
-        <sdk:Label x:Name="label_id_view" Margin="136,286,0,0" Content="..." Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_id_view" Margin="131,286,0,0" Content="..." Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_deadline" Margin="16,387,0,0" Content="deadline" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" FontWeight="Bold"/>
+        <sdk:Label x:Name="label_deadline_view" Margin="131,387,0,0" Content=" " Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="148" FontWeight="Bold"/>
 
 
     </Grid>
